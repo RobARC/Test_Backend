@@ -26,12 +26,23 @@ Simple HTTP API for check credicard numbers.
 $ pip3 install -r requirements.txt
 ```
 
-## Run
+## Run from concole
 
 ```
 $ API_HOST=0.0.0.0 API_PORT=5000 python3 -m api.v1.app
 ```
 
+## Run from docker
+
+```
+$ docker-compose up
+```
+
 ## Routes
 
 - `GET /api/v1/card`: returns the card franchise name of the API
+
+## Consult any number
+
+- `/api/v1/card?card_number=xxx xxxx xxxx xxxx` Acept blank spaces or 
+- `/api/v1/card?card_number=xxxxxxxxxxxxxxx` Not spaces
